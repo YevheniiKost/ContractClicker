@@ -143,12 +143,15 @@ public class UpgradeManager : MonoBehaviour
     
     /// <summary>
     /// Applies the effect of an upgrade.
+    /// Note: Multiplier upgrades are intentionally multiplicative (not additive) to create
+    /// the exponential scaling typical of clicker/idle games.
     /// </summary>
     private void ApplyUpgrade(Upgrade upgrade)
     {
         switch (upgrade.type)
         {
             case Upgrade.UpgradeType.ClickPowerMultiplier:
+                // Multiply existing multiplier for exponential scaling
                 float currentClickMultiplier = ClickManager.Instance.GetClickPowerMultiplier();
                 ClickManager.Instance.SetClickPowerMultiplier(currentClickMultiplier * upgrade.value);
                 break;

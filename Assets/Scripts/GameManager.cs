@@ -58,6 +58,9 @@ public class GameManager : MonoBehaviour
     
     private void Start()
     {
+        // Note: Unity guarantees all Awake() calls complete before any Start() calls,
+        // so singleton instances are safely initialized here via lazy initialization
+        
         // Subscribe to click and automation events
         ClickManager.Instance.OnClick += OnClickPerformed;
         AutomationManager.Instance.OnAutomationWork += OnAutomationWorkPerformed;
