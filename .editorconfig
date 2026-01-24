@@ -1,0 +1,188 @@
+root = true
+
+# =============================
+# Global
+# =============================
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = false
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+# =============================
+# C#
+# =============================
+[*.cs]
+
+# =========================
+# Unity fields formatting
+# =========================
+
+resharper_csharp_blank_lines_around_field = 0
+resharper_csharp_blank_lines_between_fields = 0
+
+# Allow formatter to change line breaks/arrangement
+resharper_csharp_keep_existing_attribute_arrangement = false
+resharper_csharp_keep_user_linebreaks = true
+
+# Put attribute sections on separate lines (prevents: [A] [B] on one line)
+resharper_csharp_max_attribute_length_for_same_line = 0
+
+# Never keep attributes on same line as their owner (prevents: [SerializeField] private int x;)
+resharper_csharp_place_field_attribute_on_same_line = never
+resharper_csharp_place_record_field_attribute_on_same_line = never
+resharper_csharp_place_property_attribute_on_same_line = never
+resharper_csharp_place_type_attribute_on_same_line = never
+resharper_csharp_place_method_attribute_on_same_line = never
+
+# Syntax style: split multiple attributes into separate sections: [A] [B] instead of [A, B]
+resharper_csharp_force_attribute_style = separate
+
+# ----- Braces: Allman, always -----
+csharp_new_line_before_open_brace = all
+csharp_new_line_before_else = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_finally = true
+
+# ----- Always use braces -----
+csharp_prefer_braces = true:warning
+
+# ----- var keyword: PROHIBITED -----
+csharp_style_var_for_built_in_types = false:warning
+csharp_style_var_when_type_is_apparent = false:warning
+csharp_style_var_elsewhere = false:warning
+
+# ----- dynamic keyword: PROHIBITED -----
+dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
+
+# ----- new() target-typed: PROHIBITED -----
+csharp_style_implicit_object_creation_when_type_is_apparent = false:error
+
+# ----- Using directives -----
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = true
+
+# Accessibility modifiers:
+# - REQUIRED everywhere
+# - EXCEPT interface members (C# language rule)
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:error
+
+# ----- Expression-bodied members: restricted -----
+csharp_style_expression_bodied_methods = when_on_single_line:suggestion
+csharp_style_expression_bodied_constructors = false:suggestion
+csharp_style_expression_bodied_operators = false:suggestion
+csharp_style_expression_bodied_properties = when_on_single_line:suggestion
+csharp_style_expression_bodied_indexers = when_on_single_line:suggestion
+csharp_style_expression_bodied_accessors = when_on_single_line:suggestion
+
+# ----- Parentheses for clarity -----
+dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity:warning
+dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity:warning
+dotnet_style_parentheses_in_other_binary_operators = always_for_clarity:warning
+dotnet_style_parentheses_in_other_operators = never_if_unnecessary:suggestion
+
+# ----- Regions: FORBIDDEN -----
+dotnet_diagnostic.IDE0079.severity = none
+
+# =============================
+# Naming rules (DEV-1 Naming Guidelines)
+# =============================
+
+# --- Public types & members: PascalCase (no prefix) ---
+dotnet_naming_rule.public_types_pascal.severity = warning
+dotnet_naming_rule.public_types_pascal.symbols = public_types
+dotnet_naming_rule.public_types_pascal.style = pascal_case_style
+
+dotnet_naming_symbols.public_types.applicable_kinds = class, struct, interface, enum, delegate
+dotnet_naming_symbols.public_types.applicable_accessibilities = public, internal, protected, protected_internal, private_protected
+
+dotnet_naming_rule.public_members_pascal.severity = warning
+dotnet_naming_rule.public_members_pascal.symbols = public_members
+dotnet_naming_rule.public_members_pascal.style = pascal_case_style
+
+dotnet_naming_symbols.public_members.applicable_kinds = method, property, event, field
+dotnet_naming_symbols.public_members.applicable_accessibilities = public, internal, protected, protected_internal, private_protected
+
+# --- Interfaces: must start with 'I' + PascalCase ---
+dotnet_naming_rule.interfaces_prefix_i.severity = error
+dotnet_naming_rule.interfaces_prefix_i.symbols = interface_symbols
+dotnet_naming_rule.interfaces_prefix_i.style = interface_style
+
+dotnet_naming_symbols.interface_symbols.applicable_kinds = interface
+dotnet_naming_symbols.interface_symbols.applicable_accessibilities = *
+
+dotnet_naming_style.interface_style.required_prefix = I
+dotnet_naming_style.interface_style.capitalization = pascal_case
+
+# --- Private/Internal instance fields: _camelCase ---
+dotnet_naming_rule.private_instance_fields_underscore_camel.severity = error
+dotnet_naming_rule.private_instance_fields_underscore_camel.symbols = private_instance_fields
+dotnet_naming_rule.private_instance_fields_underscore_camel.style = underscore_camel_style
+
+dotnet_naming_symbols.private_instance_fields.applicable_kinds = field
+dotnet_naming_symbols.private_instance_fields.applicable_accessibilities = private, internal
+dotnet_naming_symbols.private_instance_fields.required_modifiers =
+
+dotnet_naming_style.underscore_camel_style.required_prefix = _
+dotnet_naming_style.underscore_camel_style.capitalization = camel_case
+
+# --- Private/Internal static fields: s_camelCase ---
+dotnet_naming_rule.private_static_fields_s_prefix.severity = error
+dotnet_naming_rule.private_static_fields_s_prefix.symbols = private_static_fields
+dotnet_naming_rule.private_static_fields_s_prefix.style = s_underscore_camel_style
+
+dotnet_naming_symbols.private_static_fields.applicable_kinds = field
+dotnet_naming_symbols.private_static_fields.applicable_accessibilities = private, internal
+dotnet_naming_symbols.private_static_fields.required_modifiers = static
+
+dotnet_naming_style.s_underscore_camel_style.required_prefix = s_
+dotnet_naming_style.s_underscore_camel_style.capitalization = camel_case
+
+# --- Constants (fields): PascalCase ---
+dotnet_naming_rule.constants_pascal.severity = error
+dotnet_naming_rule.constants_pascal.symbols = constants_fields
+dotnet_naming_rule.constants_pascal.style = pascal_case_style
+
+dotnet_naming_symbols.constants_fields.applicable_kinds = field
+dotnet_naming_symbols.constants_fields.applicable_accessibilities = *
+dotnet_naming_symbols.constants_fields.required_modifiers = const
+
+# --- Local const: PascalCase ---
+dotnet_naming_rule.local_constants_pascal.severity = error
+dotnet_naming_rule.local_constants_pascal.symbols = local_constants
+dotnet_naming_rule.local_constants_pascal.style = pascal_case_style
+
+dotnet_naming_symbols.local_constants.applicable_kinds = local
+dotnet_naming_symbols.local_constants.required_modifiers = const
+
+# --- Parameters: camelCase ---
+dotnet_naming_rule.parameters_camel.severity = error
+dotnet_naming_rule.parameters_camel.symbols = parameters
+dotnet_naming_rule.parameters_camel.style = camel_case_style
+
+dotnet_naming_symbols.parameters.applicable_kinds = parameter
+
+dotnet_naming_style.camel_case_style.capitalization = camel_case
+
+# --- Local variables: camelCase ---
+dotnet_naming_rule.locals_camel.severity = error
+dotnet_naming_rule.locals_camel.symbols = locals
+dotnet_naming_rule.locals_camel.style = camel_case_style
+
+dotnet_naming_symbols.locals.applicable_kinds = local
+
+# --- Generic type parameters: T / TSomething ---
+dotnet_naming_rule.type_parameters_start_with_t.severity = error
+dotnet_naming_rule.type_parameters_start_with_t.symbols = type_parameters
+dotnet_naming_rule.type_parameters_start_with_t.style = type_param_style
+
+dotnet_naming_symbols.type_parameters.applicable_kinds = type_parameter
+
+dotnet_naming_style.type_param_style.required_prefix = T
+dotnet_naming_style.type_param_style.capitalization = pascal_case
+
+# --- Shared style ---
+dotnet_naming_style.pascal_case_style.capitalization = pascal_case
+
