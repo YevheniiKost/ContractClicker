@@ -1,0 +1,6 @@
+[submodule "Assets/YeKostenko/CoreKit"]
+	path = Assets/YeKostenko/CoreKit
+	url = https://github.com/YevheniiKost/CoreKit
+[submodule "Assets/YeKostenko/AudioEngine"]
+	path = Assets/YeKostenko/AudioEngine
+	url = https://github.com/YevheniiKost/AudioEngine
