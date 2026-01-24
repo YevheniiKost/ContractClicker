@@ -16,6 +16,8 @@ public class GameLoopExample : MonoBehaviour
     [Tooltip("Key to reset the game")]
     public KeyCode resetKey = KeyCode.R;
     
+    private float lastLoggedProgress = 0f;
+    
     private void Start()
     {
         // Subscribe to game events for logging
@@ -97,15 +99,20 @@ public class GameLoopExample : MonoBehaviour
         Debug.Log($"  Description: {contract.Description}");
         Debug.Log($"  Required Work: {contract.RequiredWork:F1}");
         Debug.Log($"  Reward: {contract.Reward}");
+        lastLoggedProgress = 0f; // Reset progress tracking for new contract
     }
     
     private void OnContractProgress(Contract contract, float workAdded)
     {
-        // Only log every 10% progress to avoid spam
+        // Only log when crossing a 10% threshold to avoid spam
         float progress = contract.GetProgress();
-        if (progress % 0.1f < 0.01f || contract.IsCompleted)
+        int currentThreshold = Mathf.FloorToInt(progress * 10);
+        int lastThreshold = Mathf.FloorToInt(lastLoggedProgress * 10);
+        
+        if (currentThreshold > lastThreshold || contract.IsCompleted)
         {
             Debug.Log($"[EVENT] Contract Progress: {contract.GetProgressString()} ({contract.CurrentWork:F1}/{contract.RequiredWork:F1})");
+            lastLoggedProgress = progress;
         }
     }
     

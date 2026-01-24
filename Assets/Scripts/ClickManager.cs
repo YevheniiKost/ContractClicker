@@ -72,6 +72,14 @@ public class ClickManager : MonoBehaviour
     }
     
     /// <summary>
+    /// Gets the current click power multiplier.
+    /// </summary>
+    public float GetClickPowerMultiplier()
+    {
+        return clickPowerMultiplier;
+    }
+    
+    /// <summary>
     /// Gets the current work per click.
     /// </summary>
     public float GetCurrentClickPower()

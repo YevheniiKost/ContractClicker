@@ -149,7 +149,7 @@ public class UpgradeManager : MonoBehaviour
         switch (upgrade.type)
         {
             case Upgrade.UpgradeType.ClickPowerMultiplier:
-                float currentClickMultiplier = ClickManager.Instance.GetCurrentClickPower() / ClickManager.Instance.baseClickPower;
+                float currentClickMultiplier = ClickManager.Instance.GetClickPowerMultiplier();
                 ClickManager.Instance.SetClickPowerMultiplier(currentClickMultiplier * upgrade.value);
                 break;
                 
@@ -161,8 +161,7 @@ public class UpgradeManager : MonoBehaviour
                 break;
                 
             case Upgrade.UpgradeType.AutomationMultiplier:
-                float currentAutoMultiplier = AutomationManager.Instance.GetCurrentWorkPerSecond() / 
-                    (AutomationManager.Instance.baseWorkPerSecond > 0 ? AutomationManager.Instance.baseWorkPerSecond : 1f);
+                float currentAutoMultiplier = AutomationManager.Instance.GetWorkPerSecondMultiplier();
                 AutomationManager.Instance.SetWorkPerSecondMultiplier(currentAutoMultiplier * upgrade.value);
                 break;
         }

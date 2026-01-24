@@ -96,6 +96,14 @@ public class AutomationManager : MonoBehaviour
     }
     
     /// <summary>
+    /// Gets the work per second multiplier.
+    /// </summary>
+    public float GetWorkPerSecondMultiplier()
+    {
+        return workPerSecondMultiplier;
+    }
+    
+    /// <summary>
     /// Gets the current work per second.
     /// </summary>
     public float GetCurrentWorkPerSecond()
