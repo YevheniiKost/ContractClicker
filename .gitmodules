@@ -4,3 +4,6 @@
 [submodule "Assets/YeKostenko/AudioEngine"]
 	path = Assets/YeKostenko/AudioEngine
 	url = https://github.com/YevheniiKost/AudioEngine
+[submodule "Assets/HierarchyDecorator"]
+	path = Assets/HierarchyDecorator
+	url = https://github.com/WooshiiDev/HierarchyDecorator.git

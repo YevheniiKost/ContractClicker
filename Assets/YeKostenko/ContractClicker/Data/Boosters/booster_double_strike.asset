@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2337427684b14f209fd426f4d347eca1, type: 3}
+  m_Name: booster_double_strike
+  m_EditorClassIdentifier: YeKostenko.ContractClicker.Data::YeKostenko.ContractClicker.Data.Boosters.BoosterConfig
+  _boosterId: booster_double_strike
+  _displayName: Double Strike
+  _description: Increases click power by 50% for 2 minutes.
+  _icon: {fileID: 0}
+  _rarity: 1
+  _price: 200
+  _durationInSeconds: 120
+  _statModifications:
+  - Target: 0
+    Stat: 4
+    Value: 1.5
+    Operation: 2
+  _rarityColor: {r: 0.2, g: 0.5, b: 1, a: 1}

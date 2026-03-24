@@ -1,0 +1,8 @@
+{
+    "name": "YeCostenko.ContractClicker.Domain",
+    "references": [
+        "GUID:f270e5d0e6981d241b92810279327bfa",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:c951e4dcc9174762952784f766ab2b4b"
+    ]
+}

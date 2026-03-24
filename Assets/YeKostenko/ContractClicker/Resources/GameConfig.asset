@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a4512abb0474749b493f4552e2f3b77, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: YeKostenko.ContractClicker.Data::YeKostenko.ContractClicker.Data.Game.GameConfigInternal
+  _manualWorkerCriticalChance: 0
+  _manualWorkerCriticalMultiplier: 1
+  _manualWorkerLevelLinearProgressionFactor: 0.1
+  _manualWorkerPowerLevelProgressionFactor: 1.1
+  _manualWorkerClickPower: 5
+  _manualWorkerClickInterval: 0.01
+  _manualWorkerInitialUpgradePrice: 100
+  _manualWorkerPriceUpgradeMultiplier: 1.2
+  _manualWorkerStatsModificationConfigs:
+  - _statId: 2
+    _operation: 1
+    _value: 0.01
+    _levelInterval: 5
+    _levelCap: 251
+  - _statId: 3
+    _operation: 1
+    _value: 0.1
+    _levelInterval: 5
+    _levelCap: 200
+  _autoWorkerCriticalChance: 0
+  _autoWorkerCriticalMultiplier: 1
+  _autoWorkerLevelLinearProgressionFactor: 0.1
+  _autoWorkerPowerLevelProgressionFactor: 1.1
+  _autoWorkerYieldPerInterval: 2
+  _autoWorkerYieldInterval: 1
+  _autoWorkerInitialUpgradePrice: 150
+  _autoWorkerPriceUpgradeMultiplier: 1.2
+  _autoWorkerStatsModificationConfigs:
+  - _statId: 2
+    _operation: 1
+    _value: 0.01
+    _levelInterval: 5
+    _levelCap: 250
+  - _statId: 3
+    _operation: 1
+    _value: 0.1
+    _levelInterval: 5
+    _levelCap: 200
+  - _statId: 0
+    _operation: 1
+    _value: -0.05
+    _levelInterval: 5
+    _levelCap: 100
+  _initialGold: 10000
+  _initialWorkerSlots: 1
+  _maxWorkerSlots: 5
+  _workerSlotInitialPrice: 200
+  _workerSlotPriceMultiplier: 2.5
+  _initialContractSlots: 1
+  _maxContractSlots: 5
+  _contractSlotInitialPrice: 200
+  _contractSlotPriceMultiplier: 2.5
+  _contractNames:
+  - Buy Weapons
+  - Buy Shields
+  - Fight Monsters
+  - Recruit New Soldiers
+  - Buy Water
+  - Buy Food
+  - Find Caves to Hide
+  - Recruit Spies
+  - Bribe the Nobleman
+  - Buy Maps
+  _contractTimeToComplete: 30
+  _contractRewardMultiplier: 1.5
+  _contractRewardPowerExponent: 0.9
+  _easyContractDifficultyMultiplier: 0.75
+  _mediumContractDifficultyMultiplier: 1
+  _hardContractDifficultyMultiplier: 1.35
+  _contractTimeToCompleteRandomizationRange:
+    _min: 0.8
+    _max: 1.35

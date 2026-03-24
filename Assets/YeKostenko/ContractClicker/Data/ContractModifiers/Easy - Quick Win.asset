@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8982287945764787a3fe0bfb0636f58f, type: 3}
+  m_Name: Easy - Quick Win
+  m_EditorClassIdentifier: YeKostenko.ContractClicker.Data::YeKostenko.ContractClicker.Data.Modifiers.ModifierSetConfig
+  _setName: Quick Win
+  _setDescription: 
+  _difficulty: 0
+  _minContractLevel: 1
+  _spawnChance: 70
+  _progressModifiers:
+  - _config:
+      rid: 5965664822897410119
+  - _config:
+      rid: 5965664822897410120
+  - _config:
+      rid: 5965664822897410121
+  _difficultyColor: {r: 0.6, g: 0.9019608, b: 0.6, a: 1}
+  _icon: {fileID: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: 5965664822897410119
+      type: {class: ProgressBonusConfig, ns: YeKostenko.ContractClicker.Data.Modifiers, asm: YeKostenko.ContractClicker.Data}
+      data:
+        _name: 
+        _description: 
+        _bonusAmount: 15
+    - rid: 5965664822897410120
+      type: {class: TimeBonusRewardConfig, ns: YeKostenko.ContractClicker.Data.Modifiers, asm: YeKostenko.ContractClicker.Data}
+      data:
+        _name: 
+        _description: 
+        _bonusTimeInSeconds: 45
+        _bonusMultiplier: 1.5
+    - rid: 5965664822897410121
+      type: {class: RewardMultiplierConfig, ns: YeKostenko.ContractClicker.Data.Modifiers, asm: YeKostenko.ContractClicker.Data}
+      data:
+        _name: 
+        _description: 
+        _multiplier: 1.2

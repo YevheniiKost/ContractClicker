@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63de085a19d8479cad34f134b20980f1, type: 3}
+  m_Name: ModifierDatabase
+  m_EditorClassIdentifier: YeKostenko.ContractClicker.Data::YeKostenko.ContractClicker.Data.Modifiers.ModifierDatabase
+  _modifierSets:
+  - {fileID: 11400000, guid: 92d7af592fd1583469c15b007e2287e0, type: 2}
+  - {fileID: 11400000, guid: c0d5d9da60dc77f44a1ddf66a6c0a37f, type: 2}
+  - {fileID: 11400000, guid: 21cd6295bfac25c4cb671aac73c483b4, type: 2}
+  - {fileID: 11400000, guid: bd3c55130e7a6524db5e8fd65cd51fbc, type: 2}
+  - {fileID: 11400000, guid: 6b65388a95994254fbd442f1ef1eaba7, type: 2}
+  - {fileID: 11400000, guid: e3d723406f83b334abdd07e6f54b1910, type: 2}
+  - {fileID: 11400000, guid: edd65c2e21a2357489ae188a09a1cc77, type: 2}
+  - {fileID: 11400000, guid: 626d8a8f63d390f4192300211d6b5ebd, type: 2}
+  _baseModifierChance: 100
+  _allowMultipleSets: 0
+  _maxSetsPerContract: 2
